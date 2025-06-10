@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KNÄSTARK – HAKT</title>
+  <link rel="icon" type="image/png" href="bubble_hakt.png">
   <style>
     @font-face {
       font-family: 'Bitcrusher';
@@ -27,23 +28,20 @@
       background: linear-gradient(135deg, #fa8306, #f76900);
       color: white;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 5rem 1rem; /* ökat utrymme */
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
     header img {
-      width: 200px;
-      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #fffbe6;
+    header h1, header p {
+      display: none; /* döljer rubrik och text för att endast visa banner */
     }
 
     .main {
@@ -80,105 +78,4 @@
       color: white;
       border: none;
       padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .buy-btn:hover {
-      background: #e26200;
-    }
-
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .popup-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 90%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-
-    .popup-content h2 {
-      color: #fa8306;
-    }
-
-    .close-btn {
-      margin-top: 1rem;
-      background: #fa8306;
-      color: white;
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #f5a623;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      display: none; /* tas bort enligt din begäran */
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .main h2 {
-        font-size: 1.5rem;
-      }
-    }
-
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="banner_hakt.png" alt="HAKT logotyp">
-    <h1>KNÄSTARK</h1>
-    <p>Stärk HUVUD • AXLAR • KNÄ • TÅ med HAKT</p>
-  </header>
-
-  <section class="main">
-    <img src="cover_hakt_pistol.png" alt="Knästark träningsprogram">
-    <h2>Träningsprogrammet KNÄSTARK</h2>
-    <p>Förbättra stabilitet, rörlighet och styrka i knäleden med vårt populära program.</p>
-    <p class="price">Pris: 299 kr</p>
-    <button class="buy-btn" onclick="showPopup()">Köp nu</button>
-  </section>
-
-  <div class="popup" id="swishPopup">
-    <div class="popup-content">
-      <h2>Swisha 299 kr till:</h2>
-      <p><strong>123 456 7890</strong></p>
-      <p>Ange ditt namn som meddelande så skickar vi programmet till dig!</p>
-      <button class="close-btn" onclick="closePopup()">Stäng</button>
-    </div>
-  </div>
-
-  <script>
-    function showPopup() {
-      document.getElementById('swishPopup').style.display = 'flex';
-    }
-
-    function closePopup() {
-      document.getElementById('swishPopup').style.display = 'none';
-    }
-  </script>
-
-</body>
-</html>
+      font-s
