@@ -28,12 +28,12 @@
       background: linear-gradient(135deg, #fa8306, #f76900);
       color: white;
       text-align: center;
-      padding: 5rem 1rem; /* större banner */
+      padding: 5rem 1rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     header img {
-      width: 240px; /* något större logotyp */
+      width: 240px;
       margin-bottom: 1rem;
     }
 
@@ -112,6 +112,15 @@
       color: #fa8306;
     }
 
+    .popup-content img.qr-code {
+      margin: 1rem 0;
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+    }
+
     .close-btn {
       margin-top: 1rem;
       background: #fa8306;
@@ -156,6 +165,7 @@
     <div class="popup-content">
       <h2>Swisha 299 kr till:</h2>
       <p><strong>123 456 7890</strong></p>
+      <img src="swish-QR-small.png" alt="Swish QR-kod" class="qr-code" />
       <p>Ange ditt namn som meddelande så skickar vi programmet till dig!</p>
       <button class="close-btn" onclick="closePopup()">Stäng</button>
     </div>
