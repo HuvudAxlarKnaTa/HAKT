@@ -3,28 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAKT – Knäprogrammet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>KNÄSTARK – HAKT</title>
   <style>
+    @font-face {
+      font-family: 'Bitcrusher';
+      src: url('bitcrusher.ttf') format('truetype');
+    }
+
     body {
       margin: 0;
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #ff7a00;
+      font-family: 'Bitcrusher', monospace;
+      background-color: #fa8306;
       color: white;
       text-align: center;
     }
+
     header {
-      background-color: #ff7a00;
       padding: 1rem;
     }
+
     header img {
       max-width: 250px;
       height: auto;
     }
+
     h1 {
       font-size: 3rem;
       margin: 0.5em 0;
     }
+
     .product {
       background: white;
       color: #222;
@@ -34,20 +41,25 @@
       max-width: 500px;
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
     }
+
     .product img {
       max-width: 100%;
       border-radius: 12px;
     }
+
     .product h2 {
       font-size: 2rem;
       margin: 1rem 0 0.5rem;
+      font-family: 'Bitcrusher', monospace;
     }
+
     .price {
       font-size: 1.5rem;
-      color: #ff7a00;
+      color: #fa8306;
     }
+
     .buy-btn {
-      background: #ff7a00;
+      background: #fa8306;
       color: white;
       border: none;
       padding: 1rem 2rem;
@@ -57,36 +69,78 @@
       transition: background 0.3s;
       margin-top: 1rem;
     }
+
     .buy-btn:hover {
-      background: #e06600;
+      background: #e47004;
     }
-    footer {
-      margin-top: 4rem;
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background: white;
+      color: #222;
       padding: 2rem;
-      background: #222;
-      color: #bbb;
+      border-radius: 20px;
+      max-width: 90%;
+      font-size: 1.1rem;
+      text-align: center;
     }
+
+    .close-btn {
+      margin-top: 1rem;
+      background: #fa8306;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
     <img src="banner_hakt.png" alt="HAKT logotyp">
-    <h1>Knäprogrammet HAKT</h1>
+    <h1>KNÄSTARK</h1>
     <p>HUVUD • AXLAR • KNÄ • TÅ</p>
   </header>
 
   <section class="product">
-    <img src="white_hakt.png" alt="HAKT produkt">
-    <h2>Knäprogram – HAKT</h2>
-    <p>Bygg starka knän och förbättra din rörlighet med vårt specialdesignade träningsprogram.</p>
+    <img src="cover_hakt_pistol.png" alt="Knästark program">
+    <h2>Träningsprogram: KNÄSTARK</h2>
+    <p>Bygg upp styrka och kontroll i dina knän med vårt effektiva HAKT-program.</p>
     <p class="price">299 kr</p>
-    <button class="buy-btn">Köp nu</button>
+    <button class="buy-btn" onclick="showPopup()">Köp nu</button>
   </section>
 
-  <footer>
-    &copy; 2025 HAKT Träning. Alla rättigheter förbehållna.
-  </footer>
+  <div class="popup" id="swishPopup">
+    <div class="popup-content">
+      <h2>Swisha 299 kr till:</h2>
+      <p><strong>123 456 7890</strong></p>
+      <p>Ange ditt namn som meddelande så skickar vi programmet till dig!</p>
+      <button class="close-btn" onclick="closePopup()">Stäng</button>
+    </div>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById('swishPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('swishPopup').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
