@@ -25,20 +25,27 @@
     }
 
     header {
-      width: 100%;
-      overflow: hidden;
+      background: linear-gradient(135deg, #fa8306, #f76900);
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem; /* större banner */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
-    .banner {
-      width: 100%;
-      height: auto;
-      display: block;
+    header img {
+      width: 240px; /* något större logotyp */
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      color: #fffbe6;
     }
 
     .main {
       background: #ffffff;
       max-width: 800px;
-      margin: -50px auto 3rem;
+      margin: -40px auto 3rem;
       padding: 2rem;
       border-radius: 20px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -115,16 +122,15 @@
       cursor: pointer;
     }
 
-    footer {
-      background: #f5a623;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      display: none;
-    }
-
     @media (max-width: 600px) {
+      header img {
+        width: 180px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
       .main h2 {
         font-size: 1.5rem;
       }
@@ -134,11 +140,12 @@
 <body>
 
   <header>
-    <img src="banner_hakt.png" alt="HAKT banner" class="banner" />
+    <img src="banner_hakt.png" alt="HAKT logotyp" />
+    <p>Stärk HUVUD • AXLAR • KNÄ • TÅ med HAKT</p>
   </header>
 
   <section class="main">
-    <img src="cover_hakt_pistol.png" alt="Knästark träningsprogram">
+    <img src="cover_hakt_pistol.png" alt="Knästark träningsprogram" />
     <h2>Träningsprogrammet KNÄSTARK</h2>
     <p>Förbättra stabilitet, rörlighet och styrka i knäleden med vårt populära program.</p>
     <p class="price">Pris: 299 kr</p>
